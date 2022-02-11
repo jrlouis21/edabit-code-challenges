@@ -104,8 +104,7 @@ function fiscalCode(person) {
         } else { // Less than three consonants
             nameSplit = [...nameSplit[0], ...nameSplit[1]]
             if (nameSplit.length < 3) { // Less than three letters (Add filler X)
-                filler = 3 - nameSplit.length
-                code = nameSplit.join("") + "X".repeat(filler)
+                code = nameSplit.join("") + "X".repeat(3 - nameSplit.length)
             } else {
                 code = nameSplit.slice(0,3).join("")
             }
